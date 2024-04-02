@@ -4,9 +4,13 @@ pragma solidity ^0.8.0;
 
 contract CrossBorderPayment {
    address public owner;
-
+  // Mapping to store user balances
+//    mapping(address => uint256) public balances;
+    
    // Event declaration for payment initialization
    event PaymentSent(address sender, address recipient, uint amount, string currency);
+// Event declarations for logging activities
+   // event Deposit(address indexed sender, uint256 amount);
 
    constructor() {
        owner = msg.sender;

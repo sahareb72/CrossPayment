@@ -12,6 +12,13 @@ contract CrossBorderPayment {
        owner = msg.sender;
    }
 
+ // 0: Function to deposit money into the contract
+    // This increases the sender's balance within the contract
+ //  function deposit() public payable {
+ //   require(msg.value > 0, "Deposit amount must be greater than zero.");
+//    balances[msg.sender] += msg.value;
+//    emit Deposit(msg.sender, msg.value);}
+
  // 1: Function to get the balance of the sender
     function getSenderBalance() external view returns (uint256) {
         // Retrieve the balance of the sender

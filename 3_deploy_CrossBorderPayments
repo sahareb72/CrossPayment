@@ -1,0 +1,5 @@
+const CrossBorderPayments = artifacts.require("CrossBorderPayments");
+
+module.exports = function(deployer) {
+  deployer.deploy(CrossBorderPayments);
+};

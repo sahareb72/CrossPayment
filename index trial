@@ -1,0 +1,36 @@
+// Import necessary libraries
+const Web3 = require('web3');
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Your Ethereum node URL, could be Infura or another provider
+const provider = 'YOUR_ETHEREUM_NODE_URL';
+const web3 = new Web3(provider);
+
+// The ABI of your contract (replace with your contract's actual ABI)
+const contractABI = [...]; // Paste your ABI array here
+
+// The deployed contract address
+const contractAddress = 'YOUR_CONTRACT_ADDRESS';
+
+// Creating a contract instance
+const paymentContract = new web3.eth.Contract(contractABI, contractAddress);
+
+app.get('/getBalance', async (req, res) => {
+    const { address } = req.query; // Assume we pass the address as a query parameter
+    try {
+        const balance = await web3.eth.getBalance(address);
+        res.send({ balance: web3.utils.fromWei(balance, 'ether') + ' ETH' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred while fetching the balance');
+    }
+});
+
+// Add more routes as needed for different functionalities
+// For example, to send payments, get contract owner, etc., based on your smart contract functions
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});

@@ -1,4 +1,5 @@
 
+
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.5.0 <0.9.0;
 
@@ -10,13 +11,11 @@ mapping(address => uint256) public balances;
 
 event Deposit(address indexed _from, uint256 _value);
 
-
-
 // Event declaration for payment initialization
    event PaymentSent(address sender, address recipient, uint amount, string currency);
 
-   constructor() public {
-        owner = msg.sender;
+   constructor()  {
+        owner == msg.sender;
    }
     // 0: Function to deposit money into the contract
     // This increases the sender's balance within the contract
@@ -81,10 +80,4 @@ function withdraw(uint amount) public {
     require(address(this).balance >= amount, "Insufficient balance in the contract");
     owner.transfer(amount);
 }
-
-
 }
-
-
-
-

@@ -3,4 +3,4 @@
  Step 2: Add Interactivity with JavaScript
  Added JavaScript file named app.js. This script will handle connecting to the user's Ethereum wallet and interacting with my smart contract.
  Step 4: Interacting with a Smart Contract
-To interact with a smart contract, the contract's ABI (Application Binary Interface) and address are needed. We use Web3.js to create a contract instance and call its methods.
+To interact with a smart contract, the contract's ABI (Application Binary Interface) and address are needed. 

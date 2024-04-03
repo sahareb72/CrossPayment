@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My DApp</title>
-    <!-- Add CSS for styling -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Add Web3.js -->
-    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Cross Border Payment DApp</title>
 </head>
 <body>
-    <h1>Welcome to My DApp</h1>
-    <button id="connectWalletButton">Connect Wallet</button>
-    <div id="info">
-        <!-- Information from the smart contract will be displayed here -->
+    <h1>Cross Border Payment DApp</h1>
+    <button id="connectWallet">Connect Wallet</button>
+    <div>
+        <button id="depositBtn">Deposit 0.01 ETH</button>
+        <button id="getBalanceBtn">Get My Balance</button>
     </div>
-    
-    <!-- Add custom JavaScript file -->
+    <p id="balance">Balance: </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
